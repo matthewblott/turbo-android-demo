@@ -16,6 +16,7 @@ buildscript {
 }
 
 android {
+  namespace = "com.example.demo"
   compileSdk = 34
 
   defaultConfig {
@@ -31,18 +32,6 @@ android {
     viewBinding = true
   }
 
-  // buildTypes {
-  //   getByName("release") {
-  //     isMinifyEnabled = false
-  //     setProguardFiles(listOf(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"))
-  //   }
-  //
-  //   getByName("debug") {
-  //     isDebuggable = true
-  //     setProguardFiles(listOf(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"))
-  //   }
-  // }
-
   kotlinOptions {
     jvmTarget = JavaVersion.VERSION_17.toString()
   }
@@ -51,21 +40,16 @@ android {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
   }
-
-  sourceSets {
-    named("main")  { java { srcDirs("src/main/kotlin") } }
-    named("test")  { java { srcDirs("src/test/kotlin") } }
-    named("debug") { java { srcDirs("src/debug/kotlin") } }
-  }
-
-  // lint {
-  //   lintConfig = file("android-lint.xml")
+  // sourceSets {
+  //   named("main")  { java { srcDirs("src/main/kotlin") } }
+  //   named("test")  { java { srcDirs("src/test/kotlin") } }
+  //   named("debug") { java { srcDirs("src/debug/kotlin") } }
   // }
+
   lint {
     lintConfig = file("$rootDir/app/lint.xml")
   }
 
-  namespace = "com.example.demo"
 }
 
 dependencies {
