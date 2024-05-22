@@ -23,8 +23,6 @@ android {
     applicationId = "com.example.demo"
     minSdk = 26
     targetSdk = 34
-    versionCode = 1
-    versionName = "1.0"
     vectorDrawables.useSupportLibrary = true
   }
 
@@ -39,15 +37,6 @@ android {
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
-  }
-  // sourceSets {
-  //   named("main")  { java { srcDirs("src/main/kotlin") } }
-  //   named("test")  { java { srcDirs("src/test/kotlin") } }
-  //   named("debug") { java { srcDirs("src/debug/kotlin") } }
-  // }
-
-  lint {
-    lintConfig = file("$rootDir/app/lint.xml")
   }
 
 }
