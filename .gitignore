@@ -1,21 +1,34 @@
-.gradle
-/local.properties
+# macOS
 .DS_Store
-/build
 
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-/.idea/gradle.xml
-*.iml
-local.properties
-/.idea/vcs.xml
-/.idea/runConfigurations.xml
-/.idea/misc.xml
-/.idea/jarRepositories.xml
-/.idea/compiler.xml
-
+# JetBrains
 .idea
+/.idea/assetWizardSettings.xml
+/.idea/caches
+/.idea/compiler.xml
+/.idea/gradle.xml
+/.idea/jarRepositories.xml
+/.idea/libraries
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/navEditor.xml
+/.idea/runConfigurations.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+
+# Gradle
+.gradle
+local.properties
+/local.properties
+app/build
+!app/lint.xml
+
+# Android
+kls_database.db
+
+# Other
+*.iml
+/build
+/captures
+.externalNativeBuild
+.cxx
