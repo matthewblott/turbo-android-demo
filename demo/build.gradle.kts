@@ -18,6 +18,9 @@ buildscript {
 android {
     compileSdk = 34
 
+    lint {
+        lintConfig = file("$rootDir/app/lint.xml")
+    }
     defaultConfig {
         applicationId = "com.example.demo"
         minSdk = 26
