@@ -10,9 +10,6 @@ buildscript {
     mavenCentral()
   }
 
-  dependencies {
-    classpath("org.jetbrains.kotlin:kotlin-serialization:1.9.10")
-  }
 }
 
 android {
@@ -20,10 +17,7 @@ android {
   compileSdk = 34
 
   defaultConfig {
-    applicationId = "com.example.demo"
-    minSdk = 26
-    targetSdk = 34
-    vectorDrawables.useSupportLibrary = true
+    minSdk = 34
   }
 
   buildFeatures {
@@ -31,12 +25,12 @@ android {
   }
 
   kotlinOptions {
-    jvmTarget = JavaVersion.VERSION_17.toString()
+    jvmTarget = JavaVersion.VERSION_18.toString()
   }
 
   compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_18
+    targetCompatibility = JavaVersion.VERSION_18
   }
 
 }
