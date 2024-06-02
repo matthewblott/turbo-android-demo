@@ -1,6 +1,6 @@
 plugins {
-  id("com.android.application")
-  id("org.jetbrains.kotlin.android")
+  id("com.android.application") version "8.4.1"
+  id("org.jetbrains.kotlin.android") version "1.9.0"
   id("org.jetbrains.kotlin.plugin.serialization") version "1.9.10"
 }
 
@@ -36,7 +36,6 @@ android {
 }
 
 dependencies {
-  implementation(fileTree(mapOf("include" to listOf("*.jar"), "dir" to "libs")))
   implementation("com.google.android.material:material:1.12.0")
   implementation("androidx.constraintlayout:constraintlayout:2.1.4")
   implementation("androidx.recyclerview:recyclerview:1.3.2")
