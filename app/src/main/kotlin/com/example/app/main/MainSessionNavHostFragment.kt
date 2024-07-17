@@ -7,6 +7,7 @@ import com.example.app.features.imageviewer.ImageViewerFragment
 import com.example.app.features.numbers.NumberBottomSheetFragment
 import com.example.app.features.numbers.NumbersFragment
 import com.example.app.features.web.WebBottomSheetFragment
+import com.example.app.features.web.WebCustomersFragment
 import com.example.app.features.web.WebFragment
 import com.example.app.features.web.WebHomeFragment
 import com.example.app.features.web.WebModalFragment
@@ -26,6 +27,7 @@ class MainSessionNavHostFragment : TurboSessionNavHostFragment() {
         get() = listOf(
             WebFragment::class,
             WebHomeFragment::class,
+            WebCustomersFragment::class,
             WebModalFragment::class,
             WebBottomSheetFragment::class,
             NumbersFragment::class,

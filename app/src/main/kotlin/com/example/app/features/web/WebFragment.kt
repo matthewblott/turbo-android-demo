@@ -1,7 +1,9 @@
 package com.example.app.features.web
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import dev.hotwire.strada.BridgeDelegate
 import com.example.app.R
 import com.example.app.base.NavDestination
@@ -23,6 +25,10 @@ open class WebFragment : TurboWebFragment(), NavDestination {
             destination = this,
             componentFactories =  bridgeComponentFactories
         )
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_web, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
