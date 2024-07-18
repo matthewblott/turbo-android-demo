@@ -1,21 +1,17 @@
-package com.example.app.features.numbers
+package com.example.app.features.web
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.app.R
 import com.example.app.base.NavDestination
-import com.example.app.util.NUMBERS_URL
+import com.google.android.material.button.MaterialButton
 import dev.hotwire.turbo.fragments.TurboFragment
 import dev.hotwire.turbo.nav.TurboNavGraphDestination
 
 @TurboNavGraphDestination(uri = "turbo://fragment/numbers")
-class NumbersFragment : TurboFragment(), NavDestination, NumbersFragmentCallback {
-  private val numbersAdapter = NumbersAdapter(this)
-
+class NumbersFragment : TurboFragment(), NavDestination {
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
     return inflater.inflate(R.layout.fragment_numbers, container, false)
   }
@@ -26,15 +22,11 @@ class NumbersFragment : TurboFragment(), NavDestination, NumbersFragmentCallback
   }
 
   private fun initView(view: View) {
-    view.findViewById<RecyclerView>(R.id.recycler_view).apply {
-      layoutManager = LinearLayoutManager(view.context)
-      adapter = numbersAdapter.apply {
-        setData((1..100).toList())
-      }
-    }
-  }
+     val button1 = view.findViewById<MaterialButton>(R.id.button1)
 
-  override fun onItemClicked(number: Int) {
-    navigate("$NUMBERS_URL/$number")
+     button1.setOnClickListener {
+//       navigateBack()
+       navigate("http://10.0.2.2:45678")
+     }
   }
 }

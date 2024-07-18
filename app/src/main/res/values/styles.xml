@@ -6,7 +6,6 @@
     <style name="ThemeOverlay.MyTheme.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowBackground">@color/transparent</item>
-        <item name="android:windowAnimationStyle">@style/Animation.MyTheme.BottomSheet.Modal</item>
         <item name="android:statusBarColor">@color/transparent</item>
         <item name="bottomSheetStyle">@style/Widget.MyTheme.BottomSheet.Modal</item>
         <item name="android:navigationBarColor">@color/navigation_bar_color</item>
@@ -23,8 +22,6 @@
     <!--Dialogs-->
 
     <style name="ThemeOverlay.MyTheme.AlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyTheme.Rounded</item>
-        <item name="android:windowAnimationStyle">@style/Animation.MyTheme.AlertDialog</item>
     </style>
 
     <!--Toolbar-->
@@ -34,7 +31,6 @@
         <item name="colorControlNormal">?colorOnSurface</item>
         <item name="titleTextColor">?colorOnSurface</item>
         <item name="subtitleTextColor">?colorSecondary</item>
-        <item name="elevation">@dimen/toolbar_elevation</item>
     </style>
 
     <!-- Up / back button -->
